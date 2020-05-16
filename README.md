@@ -83,3 +83,14 @@ I also tried to set the `--client-log-level` to `trace` and `debug` in hope the 
 The reason the webpack config file is called `webpack.meh.js` is because in my real scenario, I use `webpack-merge` and therefore none of my webpack config files are named with the default `webpack.config.js`, and I wanted to make sure there is no extra hidden biais if the config file would be named as the default.
 
 The reason I used conditional compilation variables `_DEBUG_` and `_RELEASE_` and not simpler `DEBUG` and `RELEASE` is because it seems webpack is adding `DEBUG` on its own in development mode, so when I tested first, my code with `/// #if DEBUG` was working fine, and then when I started to write real code, it blew to my face.
+
+### Environment
+
+Name | Version | Comment
+---|---|---
+Ubuntu | 18.04.4 LTS | In WSL on Windows 10 (version 1909)
+Node | 12.16 | *See .nvmrc file*
+ifdef-loader | 2.1.5 | *See package.json file*
+webpack | 4.43.0 | *See package.json file*
+webpack-cli | 3.3.11 | *See package.json file*
+webpack-dev-server | 3.11.0 | *See package.json file*
