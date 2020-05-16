@@ -1,0 +1,14 @@
+{
+    "name": "webpack-dev-server-host-ifdef-loader",
+    "version": "0.1.0",
+    "devDependencies": {
+        "ifdef-loader": "^2.1.5",
+        "webpack": "^4.43.0",
+        "webpack-cli": "^3.3.11",
+        "webpack-dev-server": "^3.11.0"
+    },
+    "scripts": {
+        "success": "webpack-dev-server --config webpack.meh.js --content-base src",
+        "failure": "webpack-dev-server --config webpack.meh.js --content-base src --host 0.0.0.0"
+    }
+}
