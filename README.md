@@ -1,6 +1,6 @@
 # Overview
 
-This is a minimal reproduction project for an issue with Webpack dev server, the host parameter and the ifdef loader.
+This is a minimal reproduction project for an issue with `webpack-dev-server`, the `host` parameter and `ifdef-loader`.
 
 For all the following, I recommend running your browser with the dev tools open on the console all the time.
 
@@ -18,7 +18,7 @@ npm run success
 
 Open a browser to `http://localhost:8080` and you should see a blank page with "\_DEBUG\_" printed.
 
-To make sure the `ifdef-loader` works correctly, you can open the file `webpack.meh.js` and change the the `ifdefOptions` as follow:
+To make sure the `ifdef-loader` works correctly, you can open the file `webpack.meh.js` and change the `ifdefOptions` as follow:
 
 ```js
 const ifdefOptions = {
@@ -80,7 +80,7 @@ I also tried to set the `--client-log-level` to `trace` and `debug` in hope the 
 
 ### Notes
 
-The reason the webpack config file is called `webpack.meh.js` is because in my real scenario, I use `webpack-merge` and therefore none of my webpack config files are named with the default `webpack.config.js`, and I wanted to make sure there is no extra hidden biais if the config file would be named as the default.
+The reason the webpack config file is called `webpack.meh.js` is because in my real scenario, I use `webpack-merge` and therefore none of my webpack config files are named with the default `webpack.config.js`, and I wanted to make sure there is no extra hidden bias if the config file would be named as the default.
 
 The reason I used conditional compilation variables `_DEBUG_` and `_RELEASE_` and not simpler `DEBUG` and `RELEASE` is because it seems webpack is adding `DEBUG` on its own in development mode, so when I tested first, my code with `/// #if DEBUG` was working fine, and then when I started to write real code, it blew to my face.
 
